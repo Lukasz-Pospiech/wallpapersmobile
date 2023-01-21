@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+#container {
+    position: fixed;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    z-index: 1000;
+}
+
+.gallpic1 {
+    position: absolute;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    left: 0vw;
+    top: 0vw;
+}
+
+.welcomingTexts {
+    margin-top: calc(var(--vh, 1vh) * 2);
+    font-size: 6vw;
+    font-family: 'Train One', 'Roboto';
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    padding: 4vw;
+    text-align: center;
+    color: rgb(251, 243, 196);
+}
+
+#dicaprio {
+    display: block;
+    width: 64vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loadingIcon {
+    width: 24vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(var(--vh, 1vh) * 4);
+}
+
+#swipeIcon {
+    width: 24vw;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(var(--vh, 1vh) * 4);
+}
+
+
+.picInvisible {
+    display: none;
+}
+
+.picHiddenToLeft {
+    position: absolute;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    left: 100vw;
+    top: 0vw;
+    animation-name: picHiddenToLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes picHiddenToLeft {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: 0vw;
+    }
+}
+
+#picHiddenToLeftStatic {
+    position: absolute;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    left: 100vw;
+    top: 0vw;
+}
+
+.picVisibleToLeft {
+    position: absolute;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    right: 0vw;
+    top: 0vw;
+    animation-name: picVisibleToLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes picVisibleToLeft {
+    0% {
+        right: 0vw;
+    }
+    100% {
+        right: 100vw;
+    }
+}
+
+.picHiddenToRight {
+    position: absolute;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    right: 100vw;
+    top: 0;
+    animation-name: picHiddenToRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes picHiddenToRight {
+    0% {
+        right: 100vw;
+    }
+    100% {
+        right: 0vw;
+    }
+}
+
+#picHiddenToRightStatic {
+    position: absolute;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    right: 100vw;
+    top: 0vw;
+}
+
+.picVisibleToRight {
+    position: absolute;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    left: 0vw;
+    top: 0vw;
+    animation-name: picVisibleToRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes picVisibleToRight {
+    0% {
+        left: 0vw;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+#swipeArea {
+    position: fixed;
+    z-index: 2000;
+    /* opacity: 0.3; */
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    left: 0vw;
+    top: 0vw;
+}
+
